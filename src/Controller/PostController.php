@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Controller\BaseController;
-use Twig\Environment;
 
 final class PostController extends BaseController
 {
@@ -12,24 +11,31 @@ final class PostController extends BaseController
         return [];
     }
 
-    public function create()
-    {
-        // TODO To dev;
+                                        public function create()
+                                        {
+                                            if ('POST' === $_SERVER['REQUEST_METHOD']){
+                                                $data = [
+                                                    'id'=> $_POST['id'],
+                                                    'identifiant'=> $_POST['identifiant'],
+                                                    'password'=> $_POST['password'],
+                                                    'email'=> $_POST['email'],
+                                                    'commentaire'=> $_POST['commentaire'],
+                                                ];
+                                            }
+                                            echo $this->render('templates/Formulaire.html.twig', $data ?? []);
+                                        }
 
-        // Appel à la BDD
-    }
-
-    public function read()
-    {
-        // TODO To dev;
-        echo $this->render('index.html.twig', [
-            'colors' => [
-                'red',
-                'yellow',
-                'green',
-            ]
-        ]);
-    }
+                                        public function read()
+                                        {
+                                            // TODO To dev;
+                                            echo $this->render('Accueil.html.twig', [
+                                                'colors' => [
+                                                    'red',
+                                                    'yellow',
+                                                    'green',
+                                                ]
+                                            ]);
+                                        }
 
     public function update()
     {

@@ -10,5 +10,5 @@ return array(
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
-    'Odeliacohen\\Inf5td\\' => array($baseDir . '/src'),
+    'App\\' => array($baseDir . '/src'),
 );
