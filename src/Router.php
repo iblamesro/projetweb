@@ -4,7 +4,7 @@ namespace App;
 
 final class Router
 {
-    private array $routes = [];
+                                    private array $routes = [];
 
                                     public function __construct()
                                     {

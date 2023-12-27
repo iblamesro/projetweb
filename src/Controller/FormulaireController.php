@@ -38,7 +38,7 @@ class FormulaireController extends BaseController {
     public function read()
     {
         $data = [];
-        echo $this->twig->render('post/Accueil.html.twig', ['data' => $data]); // Assurez-vous que le chemin est correct
+        echo $this->twig->render('templates/Formulaire.html.twig', ['data' => $data]); // Assurez-vous que le chemin est correct
     }
 
                                             public function update()
