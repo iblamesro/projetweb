@@ -22,10 +22,7 @@ class ComposerStaticInite11ec62ee8b2b13aa7948479a9dbf071
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
-        ),
-        'A' => 
-        array (
-            'App\\' => 4,
+            'Sara\\Projetweb\\' => 15,
         ),
     );
 
@@ -46,7 +43,7 @@ class ComposerStaticInite11ec62ee8b2b13aa7948479a9dbf071
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'App\\' => 
+        'Sara\\Projetweb\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

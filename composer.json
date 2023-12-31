@@ -1,5 +1,5 @@
 {
-    "name": "odeliacohen/inf5td",
+    "name": "sara/projetweb",
     "autoload": {
         "psr-4": {
             "App\\": "src/"
@@ -7,8 +7,8 @@
     },
     "authors": [
         {
-            "name": "OdeliaCohen",
-            "email": "odeliacohen1503@gmail.com"
+            "name": "iblamesro",
+            "email": "sara0301mba@yahoo.fr"
         }
     ],
     "require": {}
