@@ -24,10 +24,10 @@ class FormulaireController extends BaseController {
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Si le formulaire est envoyé en POST
             $identifiant = $_POST['identifiant'] ?? ''; // On récupère les données du formulaire
-            $password = $_POST['password'] ?? '';
+            $password = $_POST['password'] ?? ''; 
             $email = $_POST['email'] ?? '';
             $message = $_POST['message'] ?? '';
-            $problems = $_POST['problems'] ?? [];
+            $problems = $_POST['problems'] ?? []; 
 
             $this->read();
         } else {
@@ -41,10 +41,17 @@ class FormulaireController extends BaseController {
         echo $this->twig->render('templates/Formulaire.html.twig', ['data' => $data]); // Assurez-vous que le chemin est correct
     }
 
-                                            public function update()
-                                            {
-                                                // Logique de mise à jour
-                                            }
+                                           public function update(){
+                                             if ('POST' === $_SERVER['REQUEST_METHOD']){ 
+                                                 $data = [
+                                                     'id'=> $_POST['id'],
+                                                     'identifiant'=> $_POST['identifiant'],
+                                                     'password'=> $_POST['password'],
+                                                     'email'=> $_POST['email'],
+                                                     'commentaire'=> $_POST['commentaire'],
+                                                 ];
+                                             }
+                                           } 
 
                                             public function delete()
                                             {

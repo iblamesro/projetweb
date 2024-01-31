@@ -13,7 +13,7 @@ final class PostController extends BaseController
 
                                         public function create()
                                         {
-                                            if ('POST' === $_SERVER['REQUEST_METHOD']){
+                                            if ('POST' === $_SERVER['REQUEST_METHOD']){ // Si le formulaire est envoyé en POST
                                                 $data = [
                                                     'id'=> $_POST['id'],
                                                     'identifiant'=> $_POST['identifiant'],
@@ -37,10 +37,10 @@ final class PostController extends BaseController
                                             ]);
                                         }
 
-    public function update()
-    {
-        // TODO To dev;
+    public function update(){
+        
     }
+
 
     public function delete()
     {
