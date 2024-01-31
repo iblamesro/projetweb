@@ -10,20 +10,20 @@ class FormulaireController extends BaseController {
 
     private $twig;
 
-        public function __construct()
+        public function __construct() // Constructeur
         {
             $loader = new FilesystemLoader(__DIR__ . '/../../templates'); // Ajoutez le chemin approprié à votre structure de fichiers
-            $this->twig = new Environment($loader, [
-                'debug' => true,
+            $this->twig = new Environment($loader, [ // On instancie Twig
+                'debug' => true, // On active le mode debug
                 // Autres configurations Twig
             ]);
-            $this->twig->addExtension(new DebugExtension());
+            $this->twig->addExtension(new DebugExtension()); // On ajoute l'extension DebugExtension
         }
 
     public function create()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $identifiant = $_POST['identifiant'] ?? '';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Si le formulaire est envoyé en POST
+            $identifiant = $_POST['identifiant'] ?? ''; // On récupère les données du formulaire
             $password = $_POST['password'] ?? '';
             $email = $_POST['email'] ?? '';
             $message = $_POST['message'] ?? '';
