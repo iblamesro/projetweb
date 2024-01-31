@@ -37,7 +37,7 @@ final class PostController extends BaseController
                                             ]);
                                         }
 
-    public function update(){
+    public function update(){ // Méthode qui affiche le formulaire de modification
         if ('POST' === $_SERVER['REQUEST_METHOD']){ 
             $data = [
                 'id'=> $_POST['id'],
@@ -50,7 +50,7 @@ final class PostController extends BaseController
     }
 
 
-    public function delete(){
+    public function delete(){ // Méthode qui affiche le formulaire de suppression
         if ('POST' === $_SERVER['REQUEST_METHOD']){ 
             $data = [
                 'id'=> $_POST['id'],

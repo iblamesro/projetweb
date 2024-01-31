@@ -41,10 +41,10 @@ class FormulaireController extends BaseController {
         echo $this->twig->render('templates/Formulaire.html.twig', ['data' => $data]); // Assurez-vous que le chemin est correct
     }
 
-                                           public function update(){
-                                             if ('POST' === $_SERVER['REQUEST_METHOD']){ 
+                                           public function update(){ // Méthode qui affiche le formulaire de modification
+                                             if ('POST' === $_SERVER['REQUEST_METHOD']){  // Si le formulaire est envoyé en POST
                                                  $data = [
-                                                     'id'=> $_POST['id'],
+                                                     'id'=> $_POST['id'], // On récupère les données du formulaire
                                                      'identifiant'=> $_POST['identifiant'],
                                                      'password'=> $_POST['password'],
                                                      'email'=> $_POST['email'],
