@@ -38,12 +38,28 @@ final class PostController extends BaseController
                                         }
 
     public function update(){
-        
+        if ('POST' === $_SERVER['REQUEST_METHOD']){ 
+            $data = [
+                'id'=> $_POST['id'],
+                'identifiant'=> $_POST['identifiant'],
+                'password'=> $_POST['password'],
+                'email'=> $_POST['email'],
+                'commentaire'=> $_POST['commentaire'],
+            ];
+        }
     }
 
 
-    public function delete()
-    {
-        // TODO To dev;
+    public function delete(){
+        if ('POST' === $_SERVER['REQUEST_METHOD']){ 
+            $data = [
+                'id'=> $_POST['id'],
+                'identifiant'=> $_POST['identifiant'],
+                'password'=> $_POST['password'],
+                'email'=> $_POST['email'],
+                'commentaire'=> $_POST['commentaire'],
+            ];
+        }
+    
     }
 }

@@ -59,3 +59,5 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+JOINT TABLES :  SELECT * FROM user INNER JOIN commentaire ON user.id = commentaire.id_user  WHERE user.id = 1 ORDER BY commentaire.id DESC LIMIT 0, 10    (id_user = id de la table user) (id = id de la table commentaire)   
